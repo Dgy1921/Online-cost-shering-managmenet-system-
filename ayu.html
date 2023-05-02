@@ -1,0 +1,26 @@
+<canvas id="vw" width="500" height="700"></canvas>
+<script>
+   var view=document.getElementById("vw");
+   var ctx=view.getContext("2d");
+   var w=view.width=window.innerWidth;
+   var h=view.height=window.innerHeight;
+   ctx.fillStyle="#12345678";
+   ctx.strokeStyle="red";
+   ctx.lineWidth=5;
+   ctx.fillRect(0,0,w,h);
+   ctx.strokeRect((w/2)-50,(h/2)-50,100,100);
+   
+   ctx.fillStyle="red";
+   ctx.fillStyle="yellow";
+   ctx.font="50px george";
+   //ctx.strokeText("here is cg lab class",100,100);
+  // ctx.fillText("here is cg lab class",100,100);
+   
+   //loops,function...
+   var isYellow=true;
+   for(var i=0; i<w; i+=100){
+        ctx.fillStyle=isYellow ? "yellow" : "blue";
+		ctx.fillRect(i,0,100,100);
+		isYellow=!isYellow
+   }
+</script>
